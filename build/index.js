@@ -10,4 +10,14 @@ var matches = fs_1.default
 })
     .split('\n')
     .map(function (row) { return row.split(','); });
-console.log(matches);
+var manCityWins = 0;
+for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {
+    var match = matches_1[_i];
+    if (match[1] === 'Man City' && match[5] === 'H') {
+        manCityWins++;
+    }
+    else if (match[2] === 'Man City' && match[5] === 'A') {
+        manCityWins++;
+    }
+}
+console.log("Man City won: " + manCityWins + " games");
